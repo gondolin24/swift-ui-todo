@@ -19,10 +19,11 @@ struct DatePickerView: View {
             
         DatePicker("select a date", selection: $selectedDate,
                     displayedComponents: [.date])
-                .preferredColorScheme(.dark)
             .datePickerStyle(
                  GraphicalDatePickerStyle()
             )
+            .preferredColorScheme(.dark)
+
         }
     }
 }

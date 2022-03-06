@@ -65,4 +65,22 @@ class ListViewModel: ObservableObject {
             UserDefaults.standard.set(encodedData, forKey: itemsKey)
         }
     }
+    
+    
+    func overWriteItem(currentItem: ItemModel, title: String, date: Date){
+        
+        items = items.map({ (item) -> ItemModel in
+            if item.id == currentItem.id {
+                return ItemModel(title: title, isCompleted: item.isCompleted, date: date)
+
+            }else{
+                return item
+
+            }
+            
+        })
+        // persist items
+        saveItems()
+    }
+   
 }
