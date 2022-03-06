@@ -84,7 +84,7 @@ struct EditEntryView: View {
 struct EditEntryView_Previews: PreviewProvider {
     
     
-    static var itemToEdit = ItemModel(title: "THIS IS A ERY LONG ITEMx", isCompleted: true, date: Calendar.current.date(from: DateComponents(year: 2021, month: 1, day: 1))!)
+    static var itemToEdit = ItemModel(title: "THIS IS A ERY LONG ITEMx", isCompleted: true, date: Calendar.current.date(from: DateComponents(year: 2021, month: 1, day: 1))!, index: 0)
     
     static var previews: some View {
         

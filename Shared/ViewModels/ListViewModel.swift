@@ -35,19 +35,29 @@ class ListViewModel: ObservableObject {
         }
         
         self.items = savedItems
-       
+        
     }
     
     func deleteItem(indexSet: IndexSet){
         items.remove(atOffsets: indexSet)
-
+        refresh()
+        
     }
     func moveItem(from:IndexSet, to: Int){
         items.move(fromOffsets: from, toOffset: to)
+        refresh()
+      
+    }
+    
+    func refresh(){
+        items = zip(items.indices, items).map({  (index, item)->ItemModel in
+            
+            return item.updateIndex(newIndex:index)
+        })
     }
     
     func addItem(title: String, date: Date){
-        let newItem = ItemModel(title: title, isCompleted: false, date: date)
+        let newItem = ItemModel(title: title, isCompleted: false, date: date, index: items.count)
         items.append(newItem)
         
     }
@@ -71,16 +81,16 @@ class ListViewModel: ObservableObject {
         
         items = items.map({ (item) -> ItemModel in
             if item.id == currentItem.id {
-                return ItemModel(title: title, isCompleted: item.isCompleted, date: date)
-
+                return ItemModel(title: title, isCompleted: item.isCompleted, date: date, index: item.index)
+                
             }else{
                 return item
-
+                
             }
             
         })
         // persist items
         saveItems()
     }
-   
+    
 }

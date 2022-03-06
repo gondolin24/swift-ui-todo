@@ -15,6 +15,7 @@
 		5A4AFAF027D4E7060039434A /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AFAEE27D4E7060039434A /* DatePickerView.swift */; };
 		5A4AFAF227D4F4840039434A /* EditEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AFAF127D4F4840039434A /* EditEntryView.swift */; };
 		5A4AFAF327D4F4840039434A /* EditEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AFAF127D4F4840039434A /* EditEntryView.swift */; };
+		5A4AFAFD27D524A50039434A /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F844E27A5AA89005ED6EC /* ListView.swift */; };
 		5A98FE4A27A4F85600F0BF34 /* TodoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A98FE3A27A4F85500F0BF34 /* TodoListApp.swift */; };
 		5A98FE4B27A4F85600F0BF34 /* TodoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A98FE3A27A4F85500F0BF34 /* TodoListApp.swift */; };
 		5A98FE4E27A4F85600F0BF34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A98FE3C27A4F85600F0BF34 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		5A1F845627A8C3DC005ED6EC /* NoItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoItemsView.swift; sourceTree = "<group>"; };
 		5A4AFAEE27D4E7060039434A /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		5A4AFAF127D4F4840039434A /* EditEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEntryView.swift; sourceTree = "<group>"; };
+		5A4AFAFE27D5257D0039434A /* TodoList--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TodoList--iOS--Info.plist"; sourceTree = "<group>"; };
 		5A98FE3A27A4F85500F0BF34 /* TodoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListApp.swift; sourceTree = "<group>"; };
 		5A98FE3C27A4F85600F0BF34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A98FE4127A4F85600F0BF34 /* Do Stuff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Do Stuff.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +80,7 @@
 		5A98FE3427A4F85500F0BF34 = {
 			isa = PBXGroup;
 			children = (
+				5A4AFAFE27D5257D0039434A /* TodoList--iOS--Info.plist */,
 				5A98FE3927A4F85500F0BF34 /* Shared */,
 				5A98FE4827A4F85600F0BF34 /* macOS */,
 				5A98FE4227A4F85600F0BF34 /* Products */,
@@ -242,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A4AFAFD27D524A50039434A /* ListView.swift in Sources */,
 				5A4AFAF027D4E7060039434A /* DatePickerView.swift in Sources */,
 				5A98FE4B27A4F85600F0BF34 /* TodoListApp.swift in Sources */,
 				5A4AFAF327D4F4840039434A /* EditEntryView.swift in Sources */,
@@ -368,10 +372,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 8X7893WTJT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TodoList--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -383,7 +388,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.diaz.todo.TodoList;
 				PRODUCT_NAME = "Do Stuff";
 				SDKROOT = iphoneos;
@@ -399,10 +404,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 8X7893WTJT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TodoList--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -414,7 +420,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.diaz.todo.TodoList;
 				PRODUCT_NAME = "Do Stuff";
 				SDKROOT = iphoneos;
