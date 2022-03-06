@@ -23,12 +23,6 @@ struct DatePickerView: View {
             .datePickerStyle(
                  GraphicalDatePickerStyle()
             )
-            
-//            HStack{
-//                Text("selected Date is:")
-//                Text(dateFormatter.string(from: date))
-//                    .font(.title)
-//            }
         }
     }
 }

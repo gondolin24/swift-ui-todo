@@ -27,12 +27,11 @@ struct ListRowView: View {
             VStack(alignment: .leading){
                 Text(item.title)
             }
-                     Spacer()
-
-                     
-                     VStack(alignment: .trailing){
-                         Text(dateFormatter.string(from: item.date))
-                     }
+            Spacer()
+            
+            VStack(alignment: .trailing){
+                Text(dateFormatter.string(from: item.date))
+            }
             
         }
         .font(.title2)
@@ -46,13 +45,13 @@ struct ListRowView_Previews: PreviewProvider {
     static  var item1 = ItemModel(title: "Get eggs", isCompleted: false, date: Date())
     static  var item2 = ItemModel(title: "THIS IS A ERY LONG ITEMx", isCompleted: true, date: Date())
     static var previews: some View {
-    
+        
         Group{
             ListRowView(item: item1)
             ListRowView(item: item2)
-
+            
         }
         .previewLayout(.sizeThatFits)
-       
+        
     }
 }
