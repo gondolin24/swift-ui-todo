@@ -16,6 +16,8 @@ struct AddView: View {
     
     @State var alertTitle: String = ""
     @State var showAlert: Bool = false
+    @State var selectedDate: Date = Date()
+
     
     var body: some View {
         ScrollView{
@@ -25,6 +27,8 @@ struct AddView: View {
                     .frame(height: 55)
                     .background(Color(UIColor.secondarySystemBackground))
                     .cornerRadius(10)
+                
+                DatePickerView(selectedDate: $selectedDate)
                 Button (action: saveButtonPress,
                 label: {
                     Text("Save".uppercased())
@@ -37,8 +41,10 @@ struct AddView: View {
 
                 })
 
+
             }
             .padding(14)
+            
             }.navigationTitle("Add and Item 🖋")
             .alert(isPresented: $showAlert) {
                 getAlert()
@@ -53,7 +59,7 @@ struct AddView: View {
     }
     func saveButtonPress(){
         if textIsAppropriate(){
-            listViewMode.addItem(title: textFieldText)
+            listViewMode.addItem(title: textFieldText, date: selectedDate )
             presentationMode.wrappedValue.dismiss()
         }
         
@@ -76,11 +82,7 @@ struct AddView_Previews: PreviewProvider {
             }
             .preferredColorScheme(.dark)
             .environmentObject(ListViewModel())
-            NavigationView {
-                AddView()
-            }
-            .preferredColorScheme(.light)
-            .environmentObject(ListViewModel())
+         
         }
         
     }
