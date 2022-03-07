@@ -23,7 +23,13 @@ struct TodoListApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView{
-                ListView()
+                if(listViewModel.isLoaded){
+                    ListView()
+                }else{
+                    ProgressView()
+                }
+                
+                    
             }
             .preferredColorScheme(.dark)
             .navigationViewStyle(StackNavigationViewStyle())

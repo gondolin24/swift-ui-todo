@@ -13,15 +13,15 @@ struct ItemModel: Identifiable, Codable {
     let id: String
     let title : String
     let isCompleted: Bool
-    let date : Date
+    let date : String
     let index: Int
     
-    init(id: String = UUID().uuidString, title: String, isCompleted: Bool, date: Date?, index: Int){
+    init(id: String = UUID().uuidString, title: String, isCompleted: Bool, date: String, index: Int){
         self.id = UUID().uuidString
         self.title = title
         self.isCompleted = isCompleted
         // default the dta
-        self.date = date ?? Date()
+        self.date = date
         self.index = index
     }
     

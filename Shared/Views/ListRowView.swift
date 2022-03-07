@@ -41,7 +41,7 @@ struct ListRowView: View {
                 Spacer()
                 
                 VStack(alignment: .trailing){
-                    Text(dateFormatter.string(from: item.date))
+                    Text(item.date)
                 }
                 
             }
@@ -68,8 +68,8 @@ struct ListRowView: View {
 
 struct ListRowView_Previews: PreviewProvider {
     
-    static  var item1 = ItemModel(title: "Get eggs", isCompleted: false, date: Date(), index: 1)
-    static  var item2 = ItemModel(title: "THIS IS A ERY LONG ITEMx", isCompleted: true, date: Date(), index: 0)
+    static  var item1 = ItemModel(title: "Get eggs", isCompleted: false, date: "2020-02-28" , index: 1)
+    static  var item2 = ItemModel(title: "THIS IS A ERY LONG ITEMx", isCompleted: true, date: "2020-02-28", index: 0)
     
     
     @State static var editMode: Bool = false

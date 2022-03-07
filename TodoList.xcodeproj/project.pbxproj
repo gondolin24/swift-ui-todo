@@ -16,6 +16,10 @@
 		5A4AFAF227D4F4840039434A /* EditEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AFAF127D4F4840039434A /* EditEntryView.swift */; };
 		5A4AFAF327D4F4840039434A /* EditEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AFAF127D4F4840039434A /* EditEntryView.swift */; };
 		5A4AFAFD27D524A50039434A /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1F844E27A5AA89005ED6EC /* ListView.swift */; };
+		5A4AFB0127D560440039434A /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AFB0027D560440039434A /* ApiClient.swift */; };
+		5A4AFB0227D560440039434A /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AFB0027D560440039434A /* ApiClient.swift */; };
+		5A4AFB0727D562100039434A /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AFB0627D562100039434A /* Items.swift */; };
+		5A4AFB0827D562100039434A /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AFB0627D562100039434A /* Items.swift */; };
 		5A98FE4A27A4F85600F0BF34 /* TodoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A98FE3A27A4F85500F0BF34 /* TodoListApp.swift */; };
 		5A98FE4B27A4F85600F0BF34 /* TodoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A98FE3A27A4F85500F0BF34 /* TodoListApp.swift */; };
 		5A98FE4E27A4F85600F0BF34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A98FE3C27A4F85600F0BF34 /* Assets.xcassets */; };
@@ -33,6 +37,8 @@
 		5A4AFAEE27D4E7060039434A /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		5A4AFAF127D4F4840039434A /* EditEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEntryView.swift; sourceTree = "<group>"; };
 		5A4AFAFE27D5257D0039434A /* TodoList--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TodoList--iOS--Info.plist"; sourceTree = "<group>"; };
+		5A4AFB0027D560440039434A /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		5A4AFB0627D562100039434A /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		5A98FE3A27A4F85500F0BF34 /* TodoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListApp.swift; sourceTree = "<group>"; };
 		5A98FE3C27A4F85600F0BF34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A98FE4127A4F85600F0BF34 /* Do Stuff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Do Stuff.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				5A1F845127A5ABC3005ED6EC /* ItemModel.swift */,
+				5A4AFB0627D562100039434A /* Items.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -75,6 +82,14 @@
 				5A1F845427A5FE2E005ED6EC /* ListViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5A4AFAFF27D560210039434A /* networking */ = {
+			isa = PBXGroup;
+			children = (
+				5A4AFB0027D560440039434A /* ApiClient.swift */,
+			);
+			path = networking;
 			sourceTree = "<group>";
 		};
 		5A98FE3427A4F85500F0BF34 = {
@@ -90,6 +105,7 @@
 		5A98FE3927A4F85500F0BF34 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				5A4AFAFF27D560210039434A /* networking */,
 				5A1F845327A5FE0E005ED6EC /* ViewModels */,
 				5A1F845027A5ABA4005ED6EC /* Models */,
 				5A98FE5827A4FB5200F0BF34 /* Views */,
@@ -234,10 +250,12 @@
 				5A1F845527A5FE2E005ED6EC /* ListViewModel.swift in Sources */,
 				5A98FE5E27A4FECB00F0BF34 /* AddView.swift in Sources */,
 				5A98FE4A27A4F85600F0BF34 /* TodoListApp.swift in Sources */,
+				5A4AFB0727D562100039434A /* Items.swift in Sources */,
 				5A1F845727A8C3DC005ED6EC /* NoItemsView.swift in Sources */,
 				5A4AFAEF27D4E7060039434A /* DatePickerView.swift in Sources */,
 				5A98FE5C27A4FCFD00F0BF34 /* ListRowView.swift in Sources */,
 				5A4AFAF227D4F4840039434A /* EditEntryView.swift in Sources */,
+				5A4AFB0127D560440039434A /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +267,8 @@
 				5A4AFAF027D4E7060039434A /* DatePickerView.swift in Sources */,
 				5A98FE4B27A4F85600F0BF34 /* TodoListApp.swift in Sources */,
 				5A4AFAF327D4F4840039434A /* EditEntryView.swift in Sources */,
+				5A4AFB0827D562100039434A /* Items.swift in Sources */,
+				5A4AFB0227D560440039434A /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +392,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8X7893WTJT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -388,7 +408,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.diaz.todo.TodoList;
 				PRODUCT_NAME = "Do Stuff";
 				SDKROOT = iphoneos;
@@ -404,7 +424,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8X7893WTJT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -420,7 +440,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.diaz.todo.TodoList;
 				PRODUCT_NAME = "Do Stuff";
 				SDKROOT = iphoneos;

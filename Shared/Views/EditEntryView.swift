@@ -52,11 +52,14 @@ struct EditEntryView: View {
                 getAlert()
             }.onAppear(perform: {
                 textFieldText = itemToEdit.title
-                selectedDate = itemToEdit.date
-
+                selectedDate = stringToDate(strDate: itemToEdit.date)
             })
-        
-          
+    }
+    
+    func stringToDate(strDate: String)->Date{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.date(from: strDate)!
     }
     
     
@@ -84,7 +87,7 @@ struct EditEntryView: View {
 struct EditEntryView_Previews: PreviewProvider {
     
     
-    static var itemToEdit = ItemModel(title: "THIS IS A ERY LONG ITEMx", isCompleted: true, date: Calendar.current.date(from: DateComponents(year: 2021, month: 1, day: 1))!, index: 0)
+    static var itemToEdit = ItemModel(title: "THIS IS A ERY LONG ITEMx", isCompleted: true, date: "2020-08-13", index: 0)
     
     static var previews: some View {
         

@@ -9,9 +9,11 @@ import SwiftUI
 
 struct ListView: View {
     
-    
+    @Environment(\.scenePhase) var scenePhase
+
     @EnvironmentObject var listViewModel: ListViewModel
     @State var editMode: EditMode = .inactive
+    
 
     
     @State var updateMode: Bool = false
@@ -25,7 +27,6 @@ struct ListView: View {
     
     var body: some View {
         ZStack {
-           
             
             if listViewModel.items.isEmpty{
                 NoItemsView()
@@ -59,6 +60,12 @@ struct ListView: View {
         .navigationTitle("Todo List")
         .toolbar {
             
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button( "Refresh") {
+                    listViewModel.getItems()
+                }
+            }
+            
             ToolbarItem(placement: .navigationBarLeading) {
                 if(!updateMode){
                     EditButton()
@@ -83,6 +90,15 @@ struct ListView: View {
             }
         }
         .environment(\.editMode, self.$editMode)
+        .onChange(of: scenePhase) { newPhase in
+                        if newPhase == .active {
+                        } else if newPhase == .inactive {
+                            listViewModel.MigrateData()
+                        } else if newPhase == .background {
+                            listViewModel.MigrateData()
+
+                        }
+                    }
     }
     
 
